@@ -17,11 +17,21 @@
       }
 
       main section{
-        background-color:orange;
-        max-width:50%;
+        background-color:salmon;
+        /*max-width:50%;*/
         margin: 50 0;
         padding: 30px;
       }
+
+      .column-left{ 
+        float: left; 
+        width: 70%; 
+        }
+        
+      .column-right{ 
+        float: left; 
+        width: 30%; 
+        }
 
 
       h1 {
@@ -60,6 +70,8 @@
     </head>
 
   <body>
+
+  <main> 
     
     <div class="container">
    
@@ -158,8 +170,10 @@
         </div>
 
         <div>
+            <h2> Daniela</h2>
 
-                <h2> Daniela</h2>
+            <section style="column-left"> 
+                
 
                 <h3>First time I browsed the web</h3>
                 
@@ -173,6 +187,10 @@
                         It was frustrating because it is about a Romanian poet, and the information is scarce so it was hard to find what I was looking for. Furthermore, I always found the modem to be incredibly unaesthetic. I never shared that thought though because I thought the benefit of having internet access outweighed the visual handicap.
                         
                 </p>
+              </section>
+
+
+              <section style="column-right"> 
 
                 <h3>Early impact of the internet</h3>
                 
@@ -181,10 +199,13 @@
                 I considerably <b style="color:white; background-color:coral">improved my English by reading tech and science articles</b> on Yahoo starting with the age of 10-11. I read more than a handful a day and remember at that time I wanted to design devices myself.
                         
                 </p>
+              </section>
 
         </div>
 
     </div>
+
+  </main>
 
   </body>
 
