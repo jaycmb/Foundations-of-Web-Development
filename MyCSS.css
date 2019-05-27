@@ -1,0 +1,98 @@
+      body {
+      }
+
+      main {
+        background-color:#a2cbb6;
+        max-width:50%;
+        margin: 0 auto ;
+        padding: 100px 100px;
+      }
+
+      main section{
+        background-color:rgba(248, 160, 150, 0.863);
+        margin: 50 0;
+        padding: 30px;
+      }
+
+      .column-left{
+        background-color:rgba(248, 160, 150, 0.863); 
+        float: left; 
+        width: 50%;
+        margin:25px; 
+        }
+        
+      .column-right{ 
+        background-color:rgba(248, 160, 150, 0.863);
+        float: right; 
+        width: 50%; 
+        margin:25x; 
+        }
+
+      .intro {
+        font-weight:600;
+      }
+
+
+      h1 {
+        color:cornflowerblue;
+        font-size: 60px;
+        font-family: sans-serif;
+        margin-left: 60px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color:white;
+        background-color:#E9967A;
+        font-size: 44px;
+        font-family: sans-serif;
+        margin-top: 80px;
+        margin-left: 60px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #424242;
+        font-size: 18px;
+        font-family: arial;
+        font-weight:200;
+        margin-left: 60px;
+        max-width: 800px;
+      }
+
+      section p {
+        max-width: 400px;
+      }
+
+      .highlight {
+        color:white; 
+        background-color:coral;
+        max-width: 800px;
+      }
+
+      .yahoo {
+        color:rgb(111, 27, 206);
+        text-align:center;
+        font-size:120%; 
+      }
+
+      .yahootext {
+        text-align:center;
+        max-width: 800px;
+        margin-left: 60px;
+      }
+
+      .movie {
+        text-align: center;
+      }
+
+      iframe {
+        display: inline-block;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        margin: 0 auto;
+      }
+
+    
