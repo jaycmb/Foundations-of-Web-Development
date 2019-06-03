@@ -1,0 +1,24 @@
+body{
+    background-image: url(../Assets/Images/background.jpg);
+    background-size:cover; /*cover makes sure that the whole background is covered with the image, contain makes sure the whole image is visible*/
+    background-position: center; /*where the image is positioned within the div*/
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+    
+    
+.container {
+    margin: 0 auto; /*because like this there s no margin top and bottom but will fit well to the sides*/
+    max-width: 1400px;
+}
+
+nav {
+
+    
+}
+
+section {
+    border: 3px solid red;
+    height: 100vh;
+}
+
