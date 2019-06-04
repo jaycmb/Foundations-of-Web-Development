@@ -1,3 +1,10 @@
+/*How to do full width for the nav elemnt boxes?*/
+/*How to target the hero div, .hero div does not work*/
+/*how to center the hero?*/
+/*How to place the teaser below*/
+/*Whats Nav Switch doing?*/
+
+
 body{
     background-image: url(../Assets/Images/background.jpg);
     background-size:cover; /*cover makes sure that the whole background is covered with the image, contain makes sure the whole image is visible*/
@@ -12,13 +19,132 @@ body{
     max-width: 1400px;
 }
 
-nav {
+#siteNav {
+    background-color: white;
+    display: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 
-    
+  @media screen and (min-width: 801px) {
+    #siteNav {
+      left: 0;
+      top: 50%;
+      position: fixed;
+      width: 150px;
+      transform: translateY(-50%);
+    }
+#siteNav ul{
+    padding:0;
+    margin:0;
 }
+
+#siteNav ul li {
+  list-style: none;
+}
+
+
+#siteNav ul li a {
+    color: black;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+  }
+
+  #siteNav ul li:first-child a {
+    background-color:#99CA68;
+  }
+
+  #siteNav ul li:nth-child(2) a {
+    background-color:#BCD68D;
+  }
+
+  #siteNav ul li:nth-child(3) a {
+    background-color:#CFDF94;
+  }
+
+  #siteNav ul li:nth-child(4) {
+    background-color:#80BF8B;
+  }
+
+
+  #siteNav ul li a:hover {
+    background-color:#6CAC82;
+    color: white;
+  }
+
 
 section {
     border: 3px solid red;
     height: 100vh;
 }
 
+.homescreen{
+    position:relative;
+}
+
+/*div.hero h1 {
+background-color:red;
+width:300px;
+height:300px;
+display:block;
+}*/
+
+.hero{
+    background-color:lightgreen;
+    min-width:600px;
+    width:50%;
+    max-width: 800px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.hero h1{
+    color:white;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:600;
+    font-size: 48px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hero p{
+    color:white;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 32px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.teaser {
+    background-color:#F07060;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 24px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-130px;
+
+}
