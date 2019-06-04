@@ -1,18 +1,24 @@
-/*How to do full width for the nav elemnt boxes?*/
-/*How to target the hero div, .hero div does not work*/
-/*how to center the hero?*/
-/*How to place the teaser below*/
-/*Whats Nav Switch doing?*/
+/* 
 
 
-body{
-    background-image: url(../Assets/Images/background.jpg);
-    background-size:cover; /*cover makes sure that the whole background is covered with the image, contain makes sure the whole image is visible*/
-    background-position: center; /*where the image is positioned within the div*/
-    background-repeat:no-repeat;
+How to do full width for the nav elemnt boxes? > set the auto margin to 0
+How to target the hero div, .hero div does not work
+how to center the hero?
+How to place the teaser below
+Whats Nav Switch doing? 
+
+*/
+
+
+
+
+body {
+    background-image: url(../assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
-    
     
 .container {
     margin: 0 auto; /*because like this there s no margin top and bottom but will fit well to the sides*/
@@ -29,14 +35,6 @@ body{
     z-index: 100;
   }
 
-  @media screen and (min-width: 801px) {
-    #siteNav {
-      left: 0;
-      top: 50%;
-      position: fixed;
-      width: 150px;
-      transform: translateY(-50%);
-    }
 #siteNav ul{
     padding:0;
     margin:0;
@@ -85,11 +83,9 @@ body{
 section {
     border: 3px solid red;
     height: 100vh;
-}
-
-.homescreen{
     position:relative;
 }
+
 
 /*div.hero h1 {
 background-color:red;
@@ -98,12 +94,21 @@ height:300px;
 display:block;
 }*/
 
+@media screen and (min-width: 801px) {
+    #siteNav {
+      left: 0;
+      top: 50%;
+      position: fixed;
+      width: 150px;
+      transform: translateY(-50%);
+    }
+}
+
 .hero{
     background-color:lightgreen;
     min-width:600px;
     width:50%;
     max-width: 800px;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -148,3 +153,127 @@ display:block;
     bottom:-130px;
 
 }
+
+.textbox{
+    padding:2px;
+    min-width: 600px;
+    width: 40%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.textbox h2{
+    color:lightgreen;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    font-size:48px;
+    font-weight:800;
+    left:0;
+    top: -100px;
+    margin-bottom:0;
+    position: absolute;
+    margin-top:0;
+    display:inline-block;
+    padding:0px 20px;
+
+}
+
+.textbox p {
+    color:rgb(49, 49, 49);
+    margin-bottom:0;
+    margin-top:0;
+    padding:20px;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    min-width:600px;
+    width:40%;
+    max-width: 800px;
+}
+
+#yourturn h3{
+    color:white;
+    background-color:lightgreen;
+    font-size:36px;
+    width:30px;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+#yourturn .textbox p {
+    color:white;
+    background-color:lightgreen;
+    width: auto;
+    min-width: auto;
+}
+
+
+#yourturn .step_holder {
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+} 
+
+#yourturn .step {
+    position:relative;
+    width: calc(50% - 20px);
+}
+
+#yourturn .step .headline {
+    display:flex;
+    background-color: lightgreen;
+    align-items: stretch;
+}
+
+#yourturn .step .headline > * {
+    margin: 0;
+}
+
+#impactAreas {
+    position:absolute;
+    left: calc(100% + 50px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+#impactAreas li a {
+    padding: 15px;
+    background-color: rgba(255,255,255, .5);
+    color: black;
+    text-decoration: none;
+}
+
+
+/*.intro .textbox{
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    min-width:600px;
+    width:40%;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding:0;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.textbox h2{
+    color:#99CA88;
+    font-size:36px;
+    margin-bottom:6px;
+    margin-top:0;
+    padding:2px;
+}
+
+.textbox p{
+    color:rgb(49, 49, 49);
+    margin-bottom:0;
+    margin-top:0;
+    padding:2px;
+} */
