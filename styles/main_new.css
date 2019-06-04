@@ -2,10 +2,9 @@
 
 
 How to do full width for the nav elemnt boxes? > set the auto margin to 0
-How to target the hero div, .hero div does not work
-how to center the hero?
-How to place the teaser below
 Whats Nav Switch doing? 
+How to target the link of first_step?
+
 
 */
 
@@ -231,6 +230,14 @@ display:block;
     margin: 0;
 }
 
+.first_step a {
+    margin-top: 150px;
+}
+
+.second_step {
+    margin-top:50px;
+}
+
 #impactAreas {
     position:absolute;
     left: calc(100% + 50px);
@@ -242,12 +249,24 @@ display:block;
 }
 
 #impactAreas li a {
+
     padding: 15px;
+    margin:5px;
     background-color: rgba(255,255,255, .5);
     color: black;
     text-decoration: none;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    transition: all 0.2s ease-out;
 }
 
+#impactAreas ul li:first-child a {
+    background-color:rgb(153, 202, 104, .7);
+  }
 
 /*.intro .textbox{
     background-color:white;
