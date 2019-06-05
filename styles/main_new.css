@@ -5,6 +5,9 @@ How to do full width for the nav elemnt boxes? > set the auto margin to 0
 Whats Nav Switch doing? 
 How to target the link of first_step?
 
+How to align Number and p in steps #shop .step_holder next to each other and below each other?
+Cannot add margin?
+
 
 */
 
@@ -102,6 +105,14 @@ display:block;
       transform: translateY(-50%);
     }
 }
+
+@media screen and (max-width: 800px) {
+    #siteNav {
+      display:none
+    }
+}
+
+
 
 .hero{
     background-color:lightgreen;
@@ -231,7 +242,10 @@ display:block;
 }
 
 .first_step a {
-    margin-top: 150px;
+   /* margin-top: 150px;*/
+   position:relative;
+   display:block;
+   transform:translateY(100px);
 }
 
 .second_step {
@@ -298,39 +312,69 @@ background-color:rgb(188, 214, 141, 0.7);
 
 }
 
-.shop h3{
+#shop h3{
     color:lightgreen;
     background-color:white;
     font-family: 'Roboto Slab', serif;
     font-size:36px;
-    font-weight:800;
+    font-weight: 800;
+    max-width: 400px;
+    margin:0 0 10px 0;
+    display: inline-block;
 }
 
-/*.intro .textbox{
-    background-color:white;
-    font-family: 'Roboto Slab', serif;
-    min-width:600px;
-    width:40%;
-    max-width: 800px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding:0;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
 
-.textbox h2{
-    color:#99CA88;
-    font-size:36px;
-    margin-bottom:6px;
-    margin-top:0;
-    padding:2px;
-}
-
-.textbox p{
+#shop .step_holder p {
     color:rgb(49, 49, 49);
     margin-bottom:0;
     margin-top:0;
+    padding:10px 20px;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    /* width:40%; */
+    display: inline;
+    font-size: 13px;
+}
+
+
+
+#shop .step_holder {
+    display:block;
     padding:2px;
-} */
+    min-width: 600px;
+    width: 40%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translateX(-50%);
+
+} 
+
+#shop .step_holder .step{
+    display:flex;
+    align-items: center;
+}
+
+
+.step_holder .number, .step_holder h4 {
+    display: inline;
+    color:lightgreen;
+    background-color:white;
+    font-size:36px;
+    font-weight: normal;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.step_holder .ToDos {
+    display: inline;
+}
+
+.step_holder .step {
+    margin-bottom: 15px;
+}
+
+#siteNav
+
+@media screen and (max-width:786px) { 'SiteNav {visibility: hidden;} }
