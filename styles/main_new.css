@@ -83,10 +83,20 @@ body {
 
 
 section {
-    border: 3px solid red;
     height: 100vh;
     position:relative;
 }
+
+a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+p a:hover {
+    background-color:lightgreen;
+    color: white;
+  }
 
 
 /*div.hero h1 {
@@ -296,7 +306,7 @@ background-color:rgb(188, 214, 141, 0.7);
     background-color:rgb(207, 223, 148, 0.7);
     }
 
-.shop header{
+header{
     color:#F07060;
     background-color:white;
     font-family: 'Roboto Slab', serif;
@@ -305,7 +315,7 @@ background-color:rgb(188, 214, 141, 0.7);
     left: 50px;
     top: 50px;
     margin-bottom:0;
-    position: absolute;
+    position: relative;
     margin-top:0;
     display:inline-block;
     padding:0px 20px;
@@ -375,6 +385,19 @@ background-color:rgb(188, 214, 141, 0.7);
     margin-bottom: 15px;
 }
 
-#siteNav
+#shop .teaser{
+    background-color:#F07060;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 24px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    position:relative;
+    /*left:80%;
+    bottom:30%;
+    transform: translate(50%;50%);*/
+}
 
 @media screen and (max-width:786px) { 'SiteNav {visibility: hidden;} }
