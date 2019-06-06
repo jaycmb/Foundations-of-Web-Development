@@ -369,7 +369,7 @@ header{
 
 .step_holder .number, .step_holder h4 {
     display: inline;
-    color:lightgreen;
+    color:#90ed90;
     background-color:white;
     font-size:36px;
     font-weight: normal;
@@ -385,7 +385,7 @@ header{
     margin-bottom: 15px;
 }
 
-#shop .teaser{
+#shop .teaser_shop{
     background-color:#F07060;
     color:white;
     font-family: 'Roboto Slab', serif;
@@ -395,9 +395,8 @@ header{
     text-align: center;
     text-decoration: none;
     position:relative;
-    /*left:80%;
-    bottom:30%;
-    transform: translate(50%;50%);*/
+    right: -34%;
+    top: 92%;
 }
 
 @media screen and (max-width:786px) { 'SiteNav {visibility: hidden;} }
