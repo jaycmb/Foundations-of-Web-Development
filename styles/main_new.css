@@ -121,6 +121,7 @@ p a:hover {
 
 .shakeme {
     position: relative;
+    bottom:60%;
     
     
 }
@@ -183,20 +184,6 @@ p a:hover {
 
 /*TEASER STYLE*/
 
- /* .teaser {
-    color:white;
-    font-family: 'Roboto Slab', serif;
-    font-weight:400;
-    font-size: 24px;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    position:absolute;
-    left:50%;
-    transform: translateX(-50%);
-    bottom:-130px; 
-
-} */
 
 /*Original version*/
 
@@ -216,6 +203,10 @@ p a:hover {
 
 }
 
+.teaser:hover {
+    font-weight:900;
+}
+
 .teaser:after{
     background-image: url(../assets/images/arrow-point-to-right.png);
     background-size: contain;
@@ -232,20 +223,8 @@ p a:hover {
 }
 
 .teaser:hover:after{
-    /* background-color: black; */
     transform: translateX(-50%) translateY(10px);
 }
-
-
-/*Why can teaser p NOT be addressed like this?*/
-
-
-
-
- #intro a:hover {
-    font-style:bold;
-    color:green;
- }
 
 
  /*TEXTBOXES on all section for Narrative*/
@@ -262,7 +241,7 @@ p a:hover {
 }
 
 .textbox h2{
-    color:lightgreen;
+    color:#90ed90;
     background-color:white;
     font-family: 'Roboto Slab', serif;
     font-size:48px;
@@ -374,10 +353,6 @@ p a:hover {
     list-style:none;
 }
 
-#impactAreas ul li a:hover {
-    background-color:rgb(153, 202, 104);
-    color: white;
-  }
 
 #impactAreas ul li:first-child a {
     background-color:rgb(153, 202, 104, .7);
@@ -389,6 +364,18 @@ background-color:rgb(188, 214, 141, 0.7);
 
 #impactAreas ul li:nth-child(3) a {
     background-color:rgb(207, 223, 148, 0.7);
+    }
+
+#impactAreas ul li:nth-child(4) a {
+    background-color:rgb(128, 191, 139,0.7);
+    }
+
+
+/* HOVER EFFECTS Second Nav*/
+
+#impactAreas ul li:first-child a:hover {
+    background-color:rgb(153, 202, 104);
+
     }
 
 /*Section Header "SHOP CONSCIOUS" etc. */
@@ -472,7 +459,7 @@ header{
     margin-bottom: 15px;
 }
 
-#shop .teaser_shop{
+#shop .teaser_howToSection {
     background-color:#F07060;
     color:white;
     font-family: 'Roboto Slab', serif;
