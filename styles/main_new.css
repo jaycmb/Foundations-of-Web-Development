@@ -1,12 +1,5 @@
 /* 
-
-
-How to do full width for the nav elemnt boxes? > set the auto margin to 0
-Whats Nav Switch doing? 
-How to target the link of first_step?
-
-How to align Number and p in steps #shop .step_holder next to each other and below each other?
-Cannot add margin?
+Ho to separte teaser text and arrow, background cannot be set transparent?
 
 
 */
@@ -26,6 +19,8 @@ body {
     margin: 0 auto; /*because like this there s no margin top and bottom but will fit well to the sides*/
     max-width: 1400px;
 }
+
+/*NAVIGATION*/
 
 #siteNav {
     background-color: white;
@@ -81,6 +76,7 @@ body {
     color: white;
   }
 
+/* "GLOBAL STYLES" */
 
 section {
     height: 100vh;
@@ -98,13 +94,40 @@ p a:hover {
     color: white;
   }
 
+@keyframes shakeme {
+    0% {
+        transform: rotate(0deg);
+    }
 
-/*div.hero h1 {
-background-color:red;
-width:300px;
-height:300px;
-display:block;
-}*/
+    25% {
+        transform: rotate(20deg);
+    }
+
+    /* 50% {
+        transform: rotate(0deg);
+    } */
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    /* 100% {
+        transform: rotate(0deg);
+    } */
+}
+
+
+
+
+.shakeme {
+    position: relative;
+    
+    
+}
+
+.shakeme:hover  {
+    animation:shakeme .3s forwards infinite;
+}
 
 @media screen and (min-width: 801px) {
     #siteNav {
@@ -126,7 +149,7 @@ display:block;
 
 .hero{
     background-color:lightgreen;
-    min-width:600px;
+    min-width:700px;
     width:50%;
     max-width: 800px;
     position: absolute;
@@ -158,6 +181,25 @@ display:block;
     text-decoration: none;
 }
 
+/*TEASER STYLE*/
+
+ /* .teaser {
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 24px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-130px; 
+
+} */
+
+/*Original version*/
+
 .teaser {
     background-color:#F07060;
     color:white;
@@ -170,9 +212,43 @@ display:block;
     position:absolute;
     left:50%;
     transform: translateX(-50%);
-    bottom:-130px;
+    bottom:-130px; 
 
 }
+
+.teaser:after{
+    background-image: url(../assets/images/arrow-point-to-right.png);
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    content:"";
+    position:absolute;
+    top:calc(100% + 20px);
+    left:50%;
+    transform: translateX(-50%) translateY(0px);
+    height:35px;
+    width:60px;
+    transition: all .2s ease-in-out;
+}
+
+.teaser:hover:after{
+    /* background-color: black; */
+    transform: translateX(-50%) translateY(10px);
+}
+
+
+/*Why can teaser p NOT be addressed like this?*/
+
+
+
+
+ #intro a:hover {
+    font-style:bold;
+    color:green;
+ }
+
+
+ /*TEXTBOXES on all section for Narrative*/
 
 .textbox{
     padding:2px;
@@ -212,6 +288,12 @@ display:block;
     width:40%;
     max-width: 800px;
 }
+
+.textbox.teaser a{
+    background-color:#F07060;
+}
+
+/*Youturn Section Styles*/
 
 #yourturn h3{
     color:white;
@@ -262,6 +344,9 @@ display:block;
     margin-top:50px;
 }
 
+
+/* "Second Navigation on Yourturn section" */
+
 #impactAreas {
     position:absolute;
     left: calc(100% + 20px);
@@ -305,6 +390,8 @@ background-color:rgb(188, 214, 141, 0.7);
 #impactAreas ul li:nth-child(3) a {
     background-color:rgb(207, 223, 148, 0.7);
     }
+
+/*Section Header "SHOP CONSCIOUS" etc. */
 
 header{
     color:#F07060;
@@ -369,7 +456,7 @@ header{
 
 .step_holder .number, .step_holder h4 {
     display: inline;
-    color:#90ed90;
+    color:rgb(144, 237, 144);
     background-color:white;
     font-size:36px;
     font-weight: normal;
