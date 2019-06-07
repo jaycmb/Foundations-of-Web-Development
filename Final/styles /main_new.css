@@ -1,0 +1,518 @@
+/* 
+Ho to separte teaser text and arrow, background cannot be set transparent?
+
+
+*/
+
+
+
+
+body {
+    background-image: url(../assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+    
+.container {
+    margin: 0 auto; /*because like this there s no margin top and bottom but will fit well to the sides*/
+    max-width: 1400px;
+}
+
+/*NAVIGATION*/
+
+#siteNav {
+    background-color: white;
+    display: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+#siteNav ul{
+    padding:0;
+    margin:0;
+}
+
+#siteNav ul li {
+  list-style: none;
+}
+
+
+#siteNav ul li a {
+    color: black;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+  }
+
+  #siteNav ul li:first-child a {
+    background-color:#99CA68;
+  }
+
+  #siteNav ul li:nth-child(2) a {
+    background-color:#BCD68D;
+  }
+
+  #siteNav ul li:nth-child(3) a {
+    background-color:rgb(207, 223, 148);
+  }
+
+  #siteNav ul li:nth-child(4) {
+    background-color:#80BF8B;
+  }
+
+
+  #siteNav ul li a:hover {
+    background-color:#6CAC82;
+    color: white;
+  }
+
+/* "GLOBAL STYLES" */
+
+section {
+    height: 100vh;
+    position:relative;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+p a:hover {
+    background-color:lightgreen;
+    color: white;
+  }
+
+
+
+
+.hero{
+    background-color:lightgreen;
+    width:50%;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.hero h1{
+    color:white;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:600;
+    font-size: 48px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hero p{
+    color:white;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 32px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*TEASER STYLE*/
+
+
+/*Original version*/
+
+.teaser {
+    background-color:#F07060;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 24px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-130px; 
+
+}
+
+.teaser:hover {
+    font-weight:900;
+}
+
+.teaser:after{
+    background-image: url(../assets/images/arrow-point-to-right.png);
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    content:"";
+    position:absolute;
+    top:calc(100% + 20px);
+    left:50%;
+    transform: translateX(-50%) translateY(0px);
+    height:35px;
+    width:60px;
+    transition: all .2s ease-in-out;
+}
+
+.teaser:hover:after{
+    transform: translateX(-50%) translateY(10px);
+}
+
+
+ /*TEXTBOXES on all section for Narrative*/
+
+.textbox{
+    padding:2px;
+    min-width: 600px;
+    width: 40%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.textbox h2{
+    color:#90ed90;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    font-size:48px;
+    font-weight:800;
+    left:0;
+    top: -100px;
+    margin-bottom:0;
+    position: absolute;
+    margin-top:0;
+    display:inline-block;
+    padding:0px 20px;
+
+}
+
+.textbox p {
+    color:rgb(49, 49, 49);
+    margin-bottom:0;
+    margin-top:0;
+    padding:20px;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    min-width:600px;
+    width:40%;
+    max-width: 800px;
+}
+
+.textbox.teaser a{
+    background-color:#F07060;
+}
+
+/*Youturn Section Styles*/
+
+#yourturn h3{
+    color:white;
+    background-color:lightgreen;
+    font-size:36px;
+    width:30px;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+#yourturn .textbox p {
+    color:white;
+    background-color:lightgreen;
+    width: auto;
+    min-width: auto;
+}
+
+
+#yourturn .step_holder {
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+} 
+
+#yourturn .step {
+    position:relative;
+    width: calc(50% - 20px);
+}
+
+#yourturn .step .headline {
+    display:flex;
+    background-color: rgb(144, 238, 144);
+    align-items: stretch;
+}
+
+#yourturn .step .headline > * {
+    margin: 0;
+}
+
+.first_step a {
+   /* margin-top: 150px;*/
+   position:relative;
+   display:block;
+   transform:translateY(100px);
+}
+
+.second_step {
+    margin-top:50px;
+}
+
+/*Animation for footprint image*/
+@keyframes shakeme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    /* 50% {
+        transform: rotate(0deg);
+    } */
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    /* 100% {
+        transform: rotate(0deg);
+    } */
+}
+
+
+
+
+.shakeme {
+    position: relative;
+    bottom:60%;
+    
+    
+}
+
+.shakeme:hover  {
+    animation:shakeme .3s forwards infinite;
+}
+
+
+
+
+/* "Second Navigation on Yourturn section" */
+
+#impactAreas {
+    position:absolute;
+    left: calc(100% + 20px);
+    top: 50%;
+    transform: translateY(-22%);
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+#impactAreas li a {
+
+    padding: 15px;
+    margin:5px;
+    background-color: rgba(255,255,255, .5);
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    transition: all 0.2s ease-out;
+    list-style:none;
+}
+
+
+#impactAreas ul li:first-child a {
+    background-color:rgb(153, 202, 104, .7);
+  }
+
+#impactAreas ul li:nth-child(2) a {
+background-color:rgb(188, 214, 141, 0.7);
+}
+
+#impactAreas ul li:nth-child(3) a {
+    background-color:rgb(207, 223, 148, 0.7);
+}
+
+#impactAreas ul li:nth-child(4) a {
+    background-color:rgb(128, 191, 139,0.7);
+}
+
+
+/* HOVER EFFECTS Second Nav*/
+
+#impactAreas ul li:first-child a:hover {
+    background-color:rgb(153, 202, 104);
+}
+
+#impactAreas ul li:nth-child(2) a:hover {
+    background-color:rgb(188, 214, 141);
+}
+
+#impactAreas ul li:nth-child(3) a:hover {
+    background-color:rgb(207, 223, 148);
+
+}
+
+#impactAreas ul li:nth-child(4) a:hover {
+    background-color:rgb(128, 191, 139);
+}
+
+/*Section Header "SHOP CONSCIOUS" etc. */
+
+header{
+    color:#F07060;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    font-size:36px;
+    font-weight:800;
+    left: 50px;
+    top: 50px;
+    margin-bottom:0;
+    position: relative;
+    margin-top:0;
+    display:inline-block;
+    padding:0px 20px;
+
+}
+
+.howToSection h3 {
+    color:lightgreen;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    font-size:36px;
+    font-weight: 800;
+    max-width: 400px;
+    margin:0 0 10px 0;
+    display: inline-block;
+}
+
+
+.howToSection .step_holder p {
+    color:rgb(49, 49, 49);
+    margin-bottom:0;
+    margin-top:0;
+    padding:10px 20px;
+    background-color:white;
+    font-family: 'Roboto Slab', serif;
+    /* width:40%; */
+    display: inline;
+    font-size: 13px;
+}
+
+
+
+.howToSection .step_holder {
+    display:block;
+    padding:2px;
+    min-width: 600px;
+    width: 40%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translateX(-50%);
+
+} 
+
+.howToSection .step_holder .step{
+    display:flex;
+    align-items: center;
+}
+
+
+.step_holder .number, .step_holder h4 {
+    display: inline;
+    color:rgb(144, 237, 144);
+    background-color:white;
+    font-size:36px;
+    font-weight: normal;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.step_holder .ToDos {
+    display: inline;
+}
+
+.step_holder .step {
+    margin-bottom: 15px;
+}
+
+.howToSection .teaser_howToSection {
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    font-size: 14px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    position:relative;
+    right:-10%;
+    top: 92%;
+}
+
+.howToSection .teaser_howToSection:after{
+    background-image: url(../assets/images/arrow-point-to-right.png);
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    content:"";
+    position:absolute;
+    top:calc(100%);
+    left:50%;
+    transform: translateX(-50%) translateY(0px);
+    height:35px;
+    width:60px;
+    transition: all .2s ease-in-out;
+}
+
+.howToSection .teaser_howToSection:hover:after{
+    transform: translateX(-50%) translateY(10px);
+}
+
+
+@media screen and (min-width: 801px) {
+    #siteNav {
+      left: 0;
+      top: 50%;
+      position: fixed;
+      width: 150px;
+      transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #siteNav {
+      display:none
+    }
+}
+
+@media screen and (max-width:800px) { 
+    #impactAreas, .step_holder, .textbox, p, h3 {
+        position:relative;
+        top:auto;
+        bottom:auto;
+        left:auto;
+        right:auto;
+    } 
+}

@@ -63,7 +63,7 @@ body {
   }
 
   #siteNav ul li:nth-child(3) a {
-    background-color:#CFDF94;
+    background-color:rgb(207, 223, 148);
   }
 
   #siteNav ul li:nth-child(4) {
@@ -94,63 +94,11 @@ p a:hover {
     color: white;
   }
 
-@keyframes shakeme {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(20deg);
-    }
-
-    /* 50% {
-        transform: rotate(0deg);
-    } */
-
-    75% {
-        transform: rotate(-20deg);
-    }
-
-    /* 100% {
-        transform: rotate(0deg);
-    } */
-}
-
-
-
-
-.shakeme {
-    position: relative;
-    bottom:60%;
-    
-    
-}
-
-.shakeme:hover  {
-    animation:shakeme .3s forwards infinite;
-}
-
-@media screen and (min-width: 801px) {
-    #siteNav {
-      left: 0;
-      top: 50%;
-      position: fixed;
-      width: 150px;
-      transform: translateY(-50%);
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #siteNav {
-      display:none
-    }
-}
 
 
 
 .hero{
     background-color:lightgreen;
-    min-width:700px;
     width:50%;
     max-width: 800px;
     position: absolute;
@@ -323,6 +271,45 @@ p a:hover {
     margin-top:50px;
 }
 
+/*Animation for footprint image*/
+@keyframes shakeme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    /* 50% {
+        transform: rotate(0deg);
+    } */
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    /* 100% {
+        transform: rotate(0deg);
+    } */
+}
+
+
+
+
+.shakeme {
+    position: relative;
+    bottom:60%;
+    
+    
+}
+
+.shakeme:hover  {
+    animation:shakeme .3s forwards infinite;
+}
+
+
+
 
 /* "Second Navigation on Yourturn section" */
 
@@ -364,19 +351,31 @@ background-color:rgb(188, 214, 141, 0.7);
 
 #impactAreas ul li:nth-child(3) a {
     background-color:rgb(207, 223, 148, 0.7);
-    }
+}
 
 #impactAreas ul li:nth-child(4) a {
     background-color:rgb(128, 191, 139,0.7);
-    }
+}
 
 
 /* HOVER EFFECTS Second Nav*/
 
 #impactAreas ul li:first-child a:hover {
     background-color:rgb(153, 202, 104);
+}
 
-    }
+#impactAreas ul li:nth-child(2) a:hover {
+    background-color:rgb(188, 214, 141);
+}
+
+#impactAreas ul li:nth-child(3) a:hover {
+    background-color:rgb(207, 223, 148);
+
+}
+
+#impactAreas ul li:nth-child(4) a:hover {
+    background-color:rgb(128, 191, 139);
+}
 
 /*Section Header "SHOP CONSCIOUS" etc. */
 
@@ -396,7 +395,7 @@ header{
 
 }
 
-#shop h3{
+.howToSection h3 {
     color:lightgreen;
     background-color:white;
     font-family: 'Roboto Slab', serif;
@@ -408,7 +407,7 @@ header{
 }
 
 
-#shop .step_holder p {
+.howToSection .step_holder p {
     color:rgb(49, 49, 49);
     margin-bottom:0;
     margin-top:0;
@@ -422,7 +421,7 @@ header{
 
 
 
-#shop .step_holder {
+.howToSection .step_holder {
     display:block;
     padding:2px;
     min-width: 600px;
@@ -435,7 +434,7 @@ header{
 
 } 
 
-#shop .step_holder .step{
+.howToSection .step_holder .step{
     display:flex;
     align-items: center;
 }
@@ -459,18 +458,61 @@ header{
     margin-bottom: 15px;
 }
 
-#shop .teaser_howToSection {
-    background-color:#F07060;
+.howToSection .teaser_howToSection {
     color:white;
     font-family: 'Roboto Slab', serif;
     font-weight:400;
-    font-size: 24px;
+    font-size: 14px;
     padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     position:relative;
-    right: -34%;
+    right:-10%;
     top: 92%;
 }
 
-@media screen and (max-width:786px) { 'SiteNav {visibility: hidden;} }
+.howToSection .teaser_howToSection:after{
+    background-image: url(../assets/images/arrow-point-to-right.png);
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    content:"";
+    position:absolute;
+    top:calc(100%);
+    left:50%;
+    transform: translateX(-50%) translateY(0px);
+    height:35px;
+    width:60px;
+    transition: all .2s ease-in-out;
+}
+
+.howToSection .teaser_howToSection:hover:after{
+    transform: translateX(-50%) translateY(10px);
+}
+
+
+@media screen and (min-width: 801px) {
+    #siteNav {
+      left: 0;
+      top: 50%;
+      position: fixed;
+      width: 150px;
+      transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #siteNav {
+      display:none
+    }
+}
+
+@media screen and (max-width:800px) { 
+    #impactAreas, .step_holder, .textbox, p, h3 {
+        position:relative;
+        top:auto;
+        bottom:auto;
+        left:auto;
+        right:auto;
+    } 
+}

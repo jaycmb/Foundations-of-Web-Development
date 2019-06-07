@@ -1,0 +1,93 @@
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+body{
+background-color:#eaeaea;
+}
+
+
+.container {
+    margin: 0 auto; /*because like this there s no margun top and bottom but will fit well to the sides*/
+    max-width: 1400px;
+}
+
+header {
+    border-bottom: 2px solid #666666;
+    margin-bottom:30px;
+    margin-top:70px;
+    padding-bottom:30px;
+    display: flex;
+    justify-content:space-between;
+    font-family: Georgia, serif;
+    font-size:25px;
+}
+
+header a {
+    text-decoration: none;
+    color:black;
+}
+
+header nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+header nav ul li{
+    display: inline-block
+}
+
+.logo strong{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:30px;
+    display:inline-block;
+    margin-right 15px;
+    position: relative;
+    padding-right:15px;
+    border-right: 2px solid #666666;
+}
+
+main {
+    overflow: auto;
+}
+
+main section { 
+    background-size:cover; /*cover makes sure that the whole background is covered with the image, contain makes sure the whole image is visible*/
+    background-position: center; /*where the image is positioned within the div*/
+    background-repeat:no-repeat; 
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+main .large {
+    background-image: url(../Assets/Images/Photo2.jpg);
+}
+
+main .small {
+    height:300px;
+    width: calc(50% - 15px); /* takes off a specific junk from a relative junk*/
+    float:left;
+}
+
+main .left{
+    background-color:blue;
+    background-image: url(../Assets/Images/Photo1.jpg)
+}
+
+main .right{
+    background-image: url(../Assets/Images/Photo3.jpg);
+    float:right;
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        padding: 0 100px;
+    }
+}
